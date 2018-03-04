@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>LOOPS</title>
+<script type="text/javascript">
+	function run()
+	{		
+		var i,a=parseInt(prompt("Enter a number")),fac=1
+		for( i=a; i>=1; i--)
+		{
+			fac=fac*i
+		}
+
+		alert("The factorial is "+fac)
+	}
+		function chan()
+	{
+		alert("Nahh dont change it !!")		
+	}
+</script>
+</head>
+<body>
+	<h1 align="center">Factorial of numbers </h1>
+<p>Here we will find out factorial of any number , it is very easy algorithm , it uses 'for loop'.The concept behind this is that factorial is obtained by multiplying a number (say 'a')by a-1 until a-1=1 as factorial of negative numbers are not defined. The code structure is as follows</p>
+<textarea onchange="chan()" cols="70" rows="7" >for(set the counter equal to the number ; set limit as counter is equal or greater 1 ; decrease the counter)
+{
+	multiply the number by the counter
+} </textarea>
+
+<p>Now lets <input type="button" value="run" onclick="run()"> the code.</p>
+Click <a href="len.html">here </a> for next project.
+</body>
+</html>

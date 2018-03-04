@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>USER registration</title>
+<script type="text/javascript">
+	function run()
+	{
+		var name=f1.t1.value
+		var email=f1.email.value
+		var addr = f1.t2.value
+		document.write("This is to inform that " + name + " has been awared a IPHONE Y from the company of garrebs and an confirmation email has been sent to "+ email + " mail address.The gift will arrive at ur home address as given by you the address is "+addr+ " .Thankyou")
+	} 
+</script>
+</head>
+<body bgcolor="yellow">
+<form name="f1" onsubmit="run()">
+<h1 align="center">User resgistration form</h1><br>
+<p>In this question you are supposed to create form for entering user information, just like we did in the practicals.It is very easy and can be done in 10min if done correctly in first attempt</p>
+<hr>
+<center>
+	Enter ur full name here :: <input type="text" name="t1"><br><br>
+	Gender : Male<input type="radio" name="gen" value="male"> or Female<input type="radio" name="gen" value="female"><br><br>
+	Enter ur address ::<br> <br><textarea name="t2" cols="10" rows="2"></textarea><br><br>
+	Enter ur City ::
+	<select>
+		<option>Mumbai</option>
+		<option>Nashik</option>
+		<option>Pune</option>
+		<option>Nagar</option>
+	</select><br><br>
+	Enter ur email address : <input type="email" name="email"><br><br>
+	<input type='submit' value="Submit"><br><br><input type="reset" value="RESET"><br><br>
+	Please enter some random stuff and click submit to see the magic !! ;)<br>
+	Here we have completed the html important questions now let's go for Javascript.Click <a href="javaform.html">here</a>
+</center>
+</form>
+</body>
+</html>
