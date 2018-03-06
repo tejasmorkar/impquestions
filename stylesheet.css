@@ -78,11 +78,11 @@ button:hover, input[type=button]:hover, input[type=submit]:hover{
 /* COMMENTS */
 
 .commentBox{
-	margin: 20px;
+	margin: auto;
 	padding: 10px;
 	display: inline-flex;
 	justify-content: center;
-	width: 100%;
+	width: 90%;
 }
 
 /* 
