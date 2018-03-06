@@ -10,7 +10,8 @@
 
 button, input[type=button], input[type=submit]{
 	font-size: 25px;
-	color: black;
+	color: white;
+	background-color: black;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
 	font-family: 'Expletus Sans', cursive;/*'Berkshire Swash', cursive;*/
@@ -23,9 +24,9 @@ button, input[type=button], input[type=submit]{
 
 button:hover, input[type=button]:hover, input[type=submit]:hover{
 	cursor: pointer;
-	background-color: black;
+	background-color: white;
 	box-shadow: 1px 1px 1px rgba(220,220,220,0.7);	
-	color: white;
+	color: black;
 	transform: scale(1.1);
 }
 
@@ -130,5 +131,8 @@ input[type=text]:focus{
 
 
 
-/*  */
-/*  */
+/* IFRAMES */
+
+
+
+/* IFRAMES */
