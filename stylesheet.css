@@ -77,12 +77,15 @@ button:hover, input[type=button]:hover, input[type=submit]:hover{
 
 /* COMMENTS */
 
-/* .commentBox{
+.commentBox{
 	margin: 20px;
 	padding: 10px;
 	display: inline-flex;
-	flex-direction: column;
+	justify-content: center;
+	width: 100%;
 }
+
+/* 
 
 .comment{ Each Comment Block
 	display: inline-flex;
