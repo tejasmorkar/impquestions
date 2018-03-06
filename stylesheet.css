@@ -73,3 +73,58 @@ button:hover, input[type=button]:hover, input[type=submit]:hover{
 }
 
 /* IMAGE + TEXT CONTAINERS */
+
+
+/* COMMENTS */
+
+/* .commentBox{
+	margin: 20px;
+	padding: 10px;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.comment{ Each Comment Block
+	display: inline-flex;
+	flex-direction: column;
+	outline: 2px solid black;
+	padding: 20px;	
+	margin: 20px;
+	box-shadow: 10px 10px 10px grey;
+	background-color: rgba(0,0,0,1);
+}
+
+#userName{ 
+	color: rgba(255,255,255,1);
+}
+
+
+#userComment{ 
+	color: rgba(255,255,255,1);
+}
+
+.newComment{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+input[type=text], textarea{
+	margin: 5px 20px;
+	color: white;
+	outline: 1px ridge black;
+	padding: 5px;
+	background-color: rgba(0,0,0,1);
+}
+
+input[type=text]:focus{
+	
+} */
+
+/* COMMENTS */
+
+
+
+/*  */
+/*  */
