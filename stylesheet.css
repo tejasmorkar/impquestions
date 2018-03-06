@@ -82,6 +82,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover{
 	padding: 10px;
 	display: inline-flex;
 	justify-content: space-around;
+	align-items: flex-start;
 	width: 90%;
 }
 
