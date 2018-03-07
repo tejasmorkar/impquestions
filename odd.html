@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><title>ODD or EVEN</title>
-<script type="text/javascript">
+<head>
+	<title>ODD or EVEN</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Expletus+Sans|Press+Start+2P" rel="stylesheet">
+<!-- <script type="text/javascript">
 	function run()
 	{
 		var a =parseInt(prompt("Enter a number "));
@@ -16,18 +19,95 @@
 	{
 		alert("Nahh dont change it !!")		
 	}
-</script>
+</script> -->
 </head>
 <body>
 <h1 align="center">ODD or EVEN</h1>
 <p>Here to check whether a number is odd or even ,  just divide by 2 , if the reminder is 0 then it is even else odd.
 	We will use if-else statement structure that checks that whether the given condition is satisfied or not.
 	The structure is as follows</p>
-<textarea onclick ="chan()" cols="20" rows="5" >if(a%2==0)
+<textarea onclick ="chan()" cols="50" rows="8" >if(a%2==0)
 even
 else
-odd </textarea>
+odd 
+
+/* I have used a bit different code to design my alert box :) 
+		Check Out By Clicking On 'RUN' */ 
+</textarea>
 <p>Now lets <input type="button" value="run" onclick="run()"> the code </p>
-Next project consist of loops which are very important, click <a href="for.html">here</a> for next
+Next project consist of loops which are very important. <a href="for.html"><button>NEXT</button></a> 
+
+<script src="sweetalert2.all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script type="text/javascript">
+async function run(){
+const {value: num1} = await swal({
+title: 'Enter A Number',
+input: 'number',
+inputPlaceholder: '#1',
+showCancelButton: true,
+inputValidator: (value) => {
+return !value && 'You need to enter a number!'
+}
+})
+if(num1 === undefined){
+swal({
+title: '<strong>Number Not Defined</strong>',
+type: 'error',
+showCloseButton: true,
+showCancelButton: false,
+focusConfirm: false,
+confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> OK!',
+confirmButtonAriaLabel: 'OK!',
+})
+}
+else
+if ((num1%2)!=0) {
+swal({
+title: '<strong>Your Result Is Here!</strong>',
+type: 'success',
+html:
+num1 + ' Is An Odd Number',
+showCloseButton: true,
+showCancelButton: false,
+focusConfirm: false,
+confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> Great!',
+confirmButtonAriaLabel: 'Thumbs up, great!',
+})
+}
+else{
+swal({
+title: '<strong>Your Result Is Here!</strong>',
+type: 'success',
+html:
+num1 + ' Is An Even Number',
+showCloseButton: true,
+showCancelButton: false,
+focusConfirm: false,
+confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> Great!',
+confirmButtonAriaLabel: 'Thumbs up, great!',
+})
+}
+}
+
+async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+
+</script>
+
 </body>
 </html>

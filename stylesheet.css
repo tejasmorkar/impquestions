@@ -2,9 +2,24 @@
 /* TEXT */
 *{
 	font-family: 'Expletus Sans', cursive;
+	padding: 0 5px;
+
 }
 
 /* TEXT */
+
+/* TEXTAREAS */
+
+textarea{
+	background-color: black;
+	color: #00E640;
+	font-family: 'Times New Roman', cursive,  'Expletus Sans', cursive;
+	font-weight: 900;
+	text-align: left;
+	padding: 10px;
+}
+
+/* TEXTAREAS */
 
 /* BUTTONS */
 

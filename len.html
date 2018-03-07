@@ -4,22 +4,13 @@
 		<title>len</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
-		<script type="text/javascript">
-			document.getElementById('goToTop').style.visibility = "hidden";
-			function run()
-			{
-				var a = prompt("enter a string");
-				var len = a.length;
-				alert("The Length of string is "+ len)
-			}
-		</script>
 	</head>
 	<body>
 		<form name="f1" onload="run()" action="index.html">
 			<h1 align="center">Length of string</h1><br><br>
 			<center>
 				<p>This is last project and is very easy, we just need to count the number of char in a given string.</p>
-				<textarea cols=70 rows="5">
+				<textarea onclick="chan()" onclick cols=70 rows="5">
 				var a = prompt("enter a string");
 				var len = a.length;   ****Important the 'l' in length should be small.****
 				alert("The Length of string is "+len)
@@ -32,5 +23,53 @@
 				</div>
 			</center>
 		</form>
+
+<script src="sweetalert2.all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script type="text/javascript">
+async function run(){
+const {value: txt} = await swal({
+title: 'Enter Some Text',
+input: 'text',
+inputPlaceholder: '#1',
+showCancelButton: true,
+inputValidator: (value) => {
+return !value && 'You need to enter a number!'
+}
+})
+
+	var len = txt.length;
+
+if(txt){
+swal({
+title: '<strong>Length Of The String Is :</strong>',
+type: 'success',
+text: len,
+showCloseButton: true,
+showCancelButton: false,
+focusConfirm: false,
+confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> Great!',
+confirmButtonAriaLabel: 'Thumbs up, great!',
+})
+}
+}
+
+async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+
+</script>
+
 	</body>
 </html>

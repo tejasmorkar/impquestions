@@ -4,29 +4,51 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
 <script type="text/javascript">
+	var i=1;
 	function run(){
-		var i;
-		for( i=1; i<= 50; i=i+2)
-		{
-			document.write(i+"<br>");
+		document.write("<br><a href='for.html'><button>Go Back</button></a><br><br>")
+		myloop();
+		function myloop(){
+		setTimeout(function  () {
+			document.write( i +"<br>");
+			i=i+2;
+			if(i<=100){
+			myloop();
+		}		
+		}, 100)
 		}
-		document.write("go <a href='for.html'>back</a>")
-		
-	}
-	function chan()
-	{
-		alert("Nahh dont change it !!")		
 	}
 </script>
 </head>
 <body>
 <h1 align="center">For loop</h1>
 <p>This is very important for various tasks where you have to itterate over an element number of time (tooo long scintific statement , no need to understand it , its just for explaning concepts ;) ). Ahh so you can create tables from it , repeat tasks find factorials and sum of natural numbers. You may be things its no use for exam but these have come twice in exam so!. Its structure is like</p>
-<textarea onchange="chan()" cols="70" rows="7" >for(start a counter; set a limit ; set the change on ever itterartion)
+<textarea onclick="chan()" cols="70" rows="7" >
+for(start a counter; set a limit ; set the change on ever itterartion)
 {
 	do some function
 } </textarea>
-<p>Now lets <input type="button" value="run" onclick="run()"> the code. We will print odd numbers from 1 to 50</p>
+<p>Now lets <input type="button" value="run" onclick="run()"> the code. We will print odd numbers from <strong>1</strong> to <strong>100!</strong></p>
 Next project we will find out factorial of a given number. <a href="fac.html"><button>Next</button></a>
+
+
+<script src="sweetalert2.all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script type="text/javascript">
+async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+</script>
+
 </body>
 </html>

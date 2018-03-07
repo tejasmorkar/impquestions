@@ -3,23 +3,42 @@
 	<head>
 		<title>css</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Expletus+Sans|Press+Start+2P" rel="stylesheet">
 		<style type="text/css">
-			p{font-size:2em;color:red;}
+			p{font-size:1.2em;color:red;font-family: 'Press Start 2P', cursive; line-height: 1.5em}
 			b{text-decoration:underline;}
 		</style>
 	</head>
 	<body>
 		<h1 align="center">To display a text with given css properties values</h1>
 		<h3>This is very easy yet imp, just follow the given direction in question and you'r done.The structure is as follows</h3><br>
-		<textarea cols=50 rows="3">
+		<textarea onclick="chan()" cols=50 rows="3">
 		<style type="text/css">
 			element{property:decleration;}
 		</style>
 		</textarea>
-		<p>This is a paragraph which is given red color as directed in the question</p>
+		<p>This is a paragraph which is given red color & font is changed as directed in the question</p>
 		<b>This is a bold tag with some text styling</b><br>
 		<strong>All the question are of same type and have some changes like colors , size and text decoration</strong><br>
-	The project is of frameset. <a href="form.html"><button>Next</button></a>
+	The Next project is of frameset. <a href="form.html"><button>Next</button></a>
+
+<script src="sweetalert2.all.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script>
+async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+</script>
+
 </body>
 </html>

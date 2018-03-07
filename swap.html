@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><title>Swapin numbers</title>
+<head>
+	<title>Swapin numbers</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
 <script type="text/javascript">
 	function run()
 	{
@@ -19,11 +22,89 @@
 <h1 align="center">Swaping two numbers </h1>
 <p>This is an important question as it is somewhat different. Here we use a simple algorithm which swaps the values of numbers.
 	Here we will use a dummy variable 'c' , ask the user to input 2 numbers (say 'a' and 'b' ) , then assign the value of 'a' to 'c' (like  c=a ) , then assign the value of 'b' to 'a'  (like a=b) , then finally assign the value of 'c' to 'b'.<br>
-	Here your algorithm ends , this  should looks like <br> { <br> c=a; <br> a=b; <br> b=c ; <br>}<br>
-	To run this algoritm click on the run button below.<br><br>
-	<input type="button" value="RUN" onclick="run()"><br><br>
-	For next project click <a href="odd.html">here</a>
+	Here your algorithm ends , your code should look like this:<br> <br> 
+<textarea onclick="chan()" cols="50" rows="8">
+{ 
+	c=a; 
+	a=b; 
+	b=c ;
+}
+	
+	To run this algorithm click on the run button below.
+</textarea>
+<br> 
+<input type="button" value="RUN" onclick="run()" style="margin: 10px 0 0 130px"><br><br>
+For next project click here:<a href="odd.html"><button>Next</button></a>
 
 </p>
+
+<script src="sweetalert2.all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script>
+
+async function run(){
+				const {value: num1} = await swal({
+					title: 'Enter Your First Number',
+					input: 'number',
+					inputPlaceholder: '#1',
+					showCancelButton: true,
+					inputValidator: (value) => {
+				    return !value && 'You need to enter a number!'
+				  }
+				})
+
+				if (num1) {
+					const {value: num2} = await swal({
+					  title: 'Enter Your Second Number',
+					  input: 'number',
+					  inputPlaceholder: '#2',
+					  showCancelButton: true,
+					  inputValidator: (value) => {
+					    return !value && 'You need to enter a number!'
+					  }
+					})
+
+				if (num2) {
+					swal({
+					  title: '<strong>You Entered;</strong>',
+					  type: 'success',
+					  html: 'a = ' + num1 + '<br> b = ' + num2,
+					  showCloseButton: true,
+					  showCancelButton: false,
+					  focusConfirm: false,
+					  confirmButtonText:
+					    '<i class="fa fa-thumbs-up"></i> OK!',
+					  confirmButtonAriaLabel: 'Thumbs up, OK!',
+					})
+					setTimeout(function () {swal({
+					  title: '<strong>After Swaping;</strong>',
+					  type: 'success',
+					  html: 'a = ' + num2 + '<br> b = ' + num1,
+					  showCloseButton: true,
+					  showCancelButton: false,
+					  focusConfirm: false,
+					  confirmButtonText:
+					    '<i class="fa fa-thumbs-up"></i> Great!',
+					  confirmButtonAriaLabel: 'Thumbs up, great!',
+					})}, 3000)
+				 }
+				}
+			}
+
+async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+</script>
+
 </body>
 </html>

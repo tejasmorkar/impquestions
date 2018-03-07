@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head><title>USER registration</title>
-<script type="text/javascript">
+<head>
+	<title>USER registration</title>
+	<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
+	<style>
+		button{
+	font-size: 25px;
+	color: white;
+	background-color: black;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+	font-family: 'Expletus Sans', cursive;/*'Berkshire Swash', cursive;*/
+	font-weight: 900;
+	margin: 10px;
+	border-radius: 10px;
+	padding: 0 10px;
+	font-variant-caps: small-caps;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: white;
+	box-shadow: 1px 1px 1px rgba(220,220,220,0.7);	
+	color: black;
+	transform: scale(1.1);
+}
+	</style>
+	<script type="text/javascript">
 	function run()
 	{
 		var name=f1.t1.value
 		var email=f1.email.value
 		var addr = f1.t2.value
-		document.write("This is to inform that " + name + " has been awared a IPHONE Y from the company of garrebs and an confirmation email has been sent to "+ email + " mail address.The gift will arrive at ur home address as given by you the address is "+addr+ " .Thankyou")
+		document.write("This is to inform that " + name + " has been awared a IPHONE Y from the company of garrebs and an confirmation email has been sent to "+ email + " mail address.The gift will arrive at ur home address as given by you the address is "+addr+ " .Thankyou <br> <a href=\"user registration.html\"><button>Go Back</button></a> ")
 	} 
-</script>
+	</script>
 </head>
 <body bgcolor="yellow">
-<form name="f1" onsubmit="run()">
+<form name="f1" onsubmit="run()" action="javaform.html">
 <h1 align="center">User resgistration form</h1><br>
 <p>In this question you are supposed to create form for entering user information, just like we did in the practicals.It is very easy and can be done in 10min if done correctly in first attempt</p>
 <hr>
@@ -30,8 +55,9 @@
 	Enter ur email address : <input type="email" name="email"><br><br>
 	<input type='submit' value="Submit"><br><br><input type="reset" value="RESET"><br><br>
 	Please enter some random stuff and click submit to see the magic !! ;)<br>
-	Here we have completed the html important questions now let's go for Javascript.Click <a href="javaform.html">here</a>
+	Here we have completed the html important questions now let's go for Javascript. 
 </center>
 </form>
+	<a href="javaform.html"> <button style="position: absolute;left: 50%; transform:translate(-50%);">Next</button></a>
 </body>
 </html>

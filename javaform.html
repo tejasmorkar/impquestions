@@ -4,26 +4,12 @@
 		<title>JAVA</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
-		<script type="text/javascript">
-			function run()
-			{
-				var a,b,c,d,e,f;
-				 a = parseInt(prompt("enter 1st number"));
-				 b = parseInt(prompt("enter 2nd number"));
-				 c =a+b;
-				 d = a-b;
-				 e= a*b;
-				 f=a/b;	
-				alert("Sum is " +c+ " , Difference is " +d+ " , Product is "+e+" ,Division is "+f);
-				alert("Similar type of questions will be asked like find area (a*b) , avarage , perimeter and so on")
-			}
-		</script>
 	</head>
 	<body>
 		<form name="f1" onload="run()" action="swap.html">
 			<h1 align="center">Calculations using javascript</h1><br><br><center>
 			<p>In this first javascript project we have to just take input for user and do calculations on them, which we are told to do.</p>
-			<textarea cols=80 rows="10">
+			<textarea onclick="chan()" cols=90 rows="12" style="padding: 10px">
 			var a,b,c,d,e,f;
 				a = parseInt(prompt("enter 1st number"));
 				b = parseInt(prompt("enter 2nd number"));
@@ -32,11 +18,87 @@
 				e= a*b;
 				f=a/b;	
 			alert("Sum is " +c+ " , Difference is " +d+ " , Product is "+e+" ,Division is "+f);
+
+			/* I have used a bit different code to design my alert box :) 
+					Check Out By Clicking On 'START' */ 
 			</textarea><br>
 			Click<input type="button" onclick="run()" value="start">to start the function <br><br>
 			This next project is important as this different from others. 
 				<a href="swap.html"><input type="submit" value="NEXT"> </a>
 			</center>
 		</form>
+
+		<script src="sweetalert2.all.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+		<script type="text/javascript">
+			async function run(){
+				const {value: num1} = await swal({
+					title: 'Enter Your First Number',
+					input: 'number',
+					inputPlaceholder: '#1',
+					showCancelButton: true,
+					inputValidator: (value) => {
+				    return !value && 'You need to enter a number!'
+				  }
+				})
+
+				if (num1) {
+					const {value: num2} = await swal({
+					  title: 'Enter Your Second Number',
+					  input: 'number',
+					  inputPlaceholder: '#2',
+					  showCancelButton: true,
+					  inputValidator: (value) => {
+					    return !value && 'You need to enter a number!'
+					  }
+					})
+
+					let d = parseInt(num1);
+					let e = parseInt(num2);
+
+				if (num2) {
+				  swal({
+					  title: '<strong>Your Result Is Here!</strong>',
+					  type: 'success',
+					  html:
+					    '<span id="n1"></span> + <span id="n2"></span> = <span id="n3"></span> <br> <span id="n4"></span> - <span id="n5"></span> = <span id="n6"></span> <br> <span id="n7"></span> * <span id="n8"></span> = <span id="n9"></span><br> <span id="n10"></span> / <span id="n11"></span> = <span id="n12"></span>',
+					  showCloseButton: true,
+					  showCancelButton: false,
+					  focusConfirm: false,
+					  confirmButtonText:
+					    '<i class="fa fa-thumbs-up"></i> Great!',
+					  confirmButtonAriaLabel: 'Thumbs up, great!',
+					})
+				  document.getElementById('n1').innerHTML = d;
+				  document.getElementById('n2').innerHTML = e;
+				  document.getElementById('n3').innerHTML = d + e;
+				  document.getElementById('n4').innerHTML = d;
+				  document.getElementById('n5').innerHTML = e;
+				  document.getElementById('n6').innerHTML = d - e;
+				  document.getElementById('n7').innerHTML = d;
+				  document.getElementById('n8').innerHTML = e;
+				  document.getElementById('n9').innerHTML = d * e;
+				  document.getElementById('n10').innerHTML = d;
+				  document.getElementById('n11').innerHTML = e;
+				  let f = Math.round((d/e) * 100) / 100;
+				  document.getElementById('n12').innerHTML = f;
+				}
+				}
+			}
+
+			async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+		</script>
 	</body>
 </html>

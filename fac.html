@@ -3,32 +3,72 @@
 <head><title>LOOPS</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
-<script type="text/javascript">
-	function run()
-	{		
-		var i,a=parseInt(prompt("Enter a number")),fac=1
-		for( i=a; i>=1; i--)
-		{
-			fac=fac*i
-		}
-
-		alert("The factorial is "+fac)
-	}
-		function chan()
-	{
-		alert("Nahh dont change it !!")		
-	}
-</script>
 </head>
 <body>
 	<h1 align="center">Factorial of numbers </h1>
 <p>Here we will find out factorial of any number , it is very easy algorithm , it uses 'for loop'.The concept behind this is that factorial is obtained by multiplying a number (say 'a')by a-1 until a-1=1 as factorial of negative numbers are not defined. The code structure is as follows</p>
-<textarea onchange="chan()" cols="70" rows="7" >for(set the counter equal to the number ; set limit as counter is equal or greater 1 ; decrease the counter)
+<textarea onclick="chan()" cols="70" rows="10" >
+for(set the counter equal to the number ; set limit as counter is equal or greater 1 ; decrease the counter)
 {
 	multiply the number by the counter
-} </textarea>
+}
+
+/* I have used a bit different code to design my alert box :) 
+		Check Out By Clicking On 'RUN' */  
+</textarea>
 
 <p>Now lets <input type="button" value="run" onclick="run()"> the code.</p>
 <a href="len.html"><button>Next</button> </a>
+
+<script src="sweetalert2.all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script type="text/javascript">
+async function run(){
+const {value: num1} = await swal({
+title: 'Enter Between 1 to 170 Orelse your RAM will run out of memory!',
+input: 'number',
+inputPlaceholder: 'Enter A Number',
+showCancelButton: true,
+inputValidator: (value) => {
+return !value && 'You need to enter a number!'
+}
+})
+
+var i, fac=1;
+		for( i=num1; i>=1; i--)
+		{
+			fac=fac*i
+		}
+
+if(num1){
+swal({
+title: '<strong>Factorial Of </strong>' + '<strong>is :</strong>',
+type: 'success',
+html: fac,
+showCloseButton: true,
+showCancelButton: false,
+focusConfirm: false,
+confirmButtonText:
+'<i class="fa fa-thumbs-up"></i> OK!',
+confirmButtonAriaLabel: 'OK!',
+})
+}
+}
+
+async function chan() {
+	var t = 0;
+	swal({
+  title: 'Naah! Don\'t Change The Text',
+  type: 'warning',
+  html: $('<div>')
+    .addClass('some-class')
+    .text('Just Hit Run!'),
+  animation: false,
+  customClass: 'animated tada',
+})
+}
+</script>
+
 </body>
 </html>
